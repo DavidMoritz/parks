@@ -74,6 +74,12 @@ module.exports = function(grunt) {
 					dest: '<%= distPath %>angular.js'
 				},
 
+				// copy config.xml
+				{
+					src: 'src/config.xml',
+					dest: '<%= distRoot %>/config.xml'
+				},
+
 				// copy all img files too
 				{
 					expand: true,
