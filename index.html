@@ -33,13 +33,13 @@
 				<li>Remember a Tree CAN NOT touch another tree diagonally but it CAN be on the same diagonal line</li>
 				<li>Check the number of required Trees on the top right corner</li>
 			</ul>
+			<button ng-click="switchPage('puzzle')" class="btn btn-primary">
+				<i class="fa fa-tree"></i> Start Solving Puzzles! <i class="fa fa-tree"></i>
+			</button>
 		</section>
 		<section ng-show="page === 'puzzle'" id="puzzle-view">
 			<div class="row">
 				<section class="col-xs-12 puzzle">
-					<div class="pull-right tree-display">
-						<img ng-repeat="t in _.range(puzzle.treeCount) track by $index" src="inc/tree-icon.png" class="img-responsive" alt="T">
-					</div>
 					<table>
 						<caption>Puzzle: {{puzzle.id}}</caption>
 						<tbody>
@@ -67,6 +67,9 @@
 			<div class="row">
 				<section class="col-xs-12">
 					<section class="action-bar" id="solving" ng-hide="creatingPuzzle">
+						<div class="pull-right tree-display">
+							<img ng-repeat="t in _.range(puzzle.treeCount) track by $index" src="inc/tree-icon.png" class="img-responsive" alt="T">
+						</div>
 						<ul class="btn-group">
 							<li class="btn btn-default"
 								ng-repeat="action in actions"
