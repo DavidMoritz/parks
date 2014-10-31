@@ -29,8 +29,7 @@ module.exports = function(grunt) {
 					'lib/jquery/dist/jquery.js',
 					'lib/bootstrap/dist/js/bootstrap.js',
 					'lib/lodash/dist/lodash.js',
-					'!src/tests/*',
-					'src/**/*.js'
+					'src/*.js'
 				],
 				'<%= distPath %>parks.css': '<%= distPath %>parks.css'
 			}
